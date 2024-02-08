@@ -1,22 +1,19 @@
-
-
 class Bag {
-    constructor(weight, id){
-        this.weight = weight;
-        this.id = id;
-    }
-    //Returns the Person assigned to the bag.
-    getOwner(){
-        return this.Person;
-    }
+  #owner;
+  constructor(weight, id) {
+    this.weight = weight;
+    this.id = id;
+    this.#owner = null;
+  }
+  //Returns the Person assigned to the bag.
+  getOwner() {
+    return this.#owner;
+  }
 
-    //Updates owner with a person assigned to a Bag.
-    assignOwner(person){
-        return person = this.bag
-    }
+  //Updates owner with a person assigned to a Bag.
+  assignOwner(person) {
+    this.#owner = person;
+  }
 }
-
-let bag1 = new Bag(25, 2);
-
 
 module.exports = Bag;
